@@ -1,0 +1,90 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+:root{
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', cursive;
+    --fonte3: 'Sriracha', cursive;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html, body{
+    min-height: 100vh;
+    background-color: #a9a9a9;
+    font-family: var(--fonte1);
+}
+/* Configurações do header */
+header{
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+header > h1{
+    padding-top: 50px;
+    /* text-transform: uppercase; Deixa todas as letras em maiusculas */
+    font-variant: small-caps;
+    font-family: var(--fonte2);
+    font-size: 10vw;
+}
+header > p{
+    padding-bottom: 50px;
+}
+header a, footer a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bolder;
+}
+header a:hover, footer a:hover{
+    text-decoration: underline;
+}
+/* Configurações das sections */
+/* Ajuda a criar o efeito paralax */
+section{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding-left: 30px;
+    line-height: 2em;
+    font-family: var(--fonte3);
+    font-size: 2vw; /* Usando a "vw" no tamanho da fonte ela aumenta ou diminui conforme o tamanho da tela*/
+}
+section > p{
+    padding-bottom: 2em;
+}
+section.normal{
+    background-color: #fff;
+    color: #000;
+}
+section.imagens{
+    background-color: #1d1c1c;
+    color: #fff;
+    box-shadow: inset 6px 6px 13px 0px #000; /*Cria uma sombra interna nas iamgens das sections. Ajuda no efeito paralax*/
+    background-attachment: fixed;
+}
+section.imagens >p{
+    display: inline-block;
+    padding: 5px;
+    background-color: #00000093;
+    text-shadow: 2px 2px 0px #000;
+    box-shadow: 6px 6px 13px 0px #000;
+    border-radius: 0px 15px;
+}
+section#img001{
+    background-image: url('imagens/joaninha_02.webp');
+    background-position: center;
+    background-size: cover;
+}
+section#img002{
+    background-image: url('imagens/carta_01.jpg');
+}
+/* Configurações do footer */
+footer{
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
